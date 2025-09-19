@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://unpkg.com 'unsafe-inline'; font-src 'self'; img-src 'self' data:;">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="crt-main">
+    <div id="desktop-area">
+      
+      <div class="desktop-icon" onclick="openWindow('about')">
+        <img src="assets/images/about_me.png" alt="About Icon">
+        <div class="icon-label">About Me</div>
+      </div>
+
+      <div class="desktop-icon" style="top: 125px; left: 20px;" onclick="openWindow('projects')">
+        <img src="assets/images/Web-documents folder 2.ico" alt="Projects Icon" class="project_icon">
+        <div class="icon-label">Projects</div>
+      </div>
+
+      <div class="desktop-icon" style="top: 210px; left: 20px;" onclick="openWindow('certificates')">
+        <img src="assets/images/Certificate 2.ico" alt="Certificates Icon">
+        <div class="icon-label">Certificates</div>
+      </div>
+
+      <div class="desktop-icon" style="top: 295px; left: 20px;" onclick="openWindow('contact')">
+        <img src="assets/images/Text in letter.ico" alt="Contact Icon" style="height: 45px; width: 45px;">
+        <div class="icon-label">Contact Me</div>
+      </div>
+
+      <!-- About Window -->
+      <div class="window" id="about-window">
+        <div class="title-bar">
+          <div class="title-bar-text">About Me</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('about')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('about')"></button>
+            <button aria-label="Close" onclick="closeWindow('about')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+         <!-- <p>Hello! I'm Krish, welcome to my Win95-style portfolio 👾</p>-->
+        </div>
+      </div>
+
+      <!-- Projects Window -->
+      <div class="window" id="projects-window">
+        <div class="title-bar">
+          <div class="title-bar-text">Projects</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('projects')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('projects')"></button>
+            <button aria-label="Close" onclick="closeWindow('projects')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <!--<p>Here are some of my projects 🛠️</p>-->
+        </div>
+      </div>
+
+      <!-- Certificates Window -->
+      <div class="window" id="certificates-window">
+        <div class="title-bar">
+          <div class="title-bar-text">Certificates</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('certificates')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('certificates')"></button>
+            <button aria-label="Close" onclick="closeWindow('certificates')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+         <!-- <p>Here are my certificates 📜</p>-->
+        </div>
+      </div>
+
+      <!-- Contact Window -->
+      <div class="window" id="contact-window">
+        <div class="title-bar">
+          <div class="title-bar-text">Contact Me</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('contact')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('contact')"></button>
+            <button aria-label="Close" onclick="closeWindow('contact')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+        <!--<p>Contact me at: krish@example.com 📧</p>-->
+        </div>
+      </div>
+
+      <!-- Wallpapers Window -->
+      <div class="window" id="wallpapers-window" style="width: 350px; height: 250px;">
+        <div class="title-bar">
+          <div class="title-bar-text">Wallpapers</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('wallpapers')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('wallpapers')"></button>
+            <button aria-label="Close" onclick="closeWindow('wallpapers')"></button>
+          </div>
+        </div>
+        <div class="window-body" id="wallpapers-body">
+          <p>Select a wallpaper to change the desktop background:</p>
+          <div class="wallpaper-selection">
+            <div class="wallpaper-option" onclick="changeWallpaper('assets/images/Wallpaper/Wallpaper2.png')">
+              <img src="assets/images/Wallpaper/Wallpaper2_Thumb.png" alt="Wallpaper 1">
+              <span>Clouds</span>
+            </div>
+            <div class="wallpaper-option" onclick="changeWallpaper('assets/images/Wallpaper/wallpaper3.webp')">
+              <img src="assets/images/Wallpaper/wallpaper3.webp" alt="Wallpaper 2">
+              <span>Vintage</span>
+            </div>
+            <div class="wallpaper-option" onclick="changeWallpaper('#008080')">
+              <img src="assets/images/Wallpaper/default_wallpaper.png" alt="Default">
+              <span>Default</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Snake Window -->
+      <div class="window" id="snake-window" style="width: 320px;">
+        <div class="title-bar">
+          <div class="title-bar-text">Snake</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('snake')"></button>
+            <button aria-label="Maximize" disabled></button>
+            <button aria-label="Close" onclick="closeWindow('snake')"></button>
+          </div>
+        </div>
+        <div class="window-body" style="background: #44483f;">
+          <div class="snake-ui-panel">
+            <span id="snake-score">SCORE: 0</span>
+            <button onclick="restartSnakeGame()">Restart</button>
+          </div>
+          <canvas id="snake-canvas" width="310" height="310"></canvas>
+        </div>
+      </div>
+
+      <!-- Paint Window -->
+      <div class="window" id="paint-window">
+        <div class="title-bar">
+          <div class="title-bar-text">Paint</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('paint')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('paint')"></button>
+            <button aria-label="Close" onclick="closeWindow('paint')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <div style="margin-bottom: 6px;">
+            <label>🎨 Color:</label>
+            <input type="color" id="brush-color" value="#000000">
+            <label>🖌️ Size:</label>
+            <select id="brush-size-select">
+              <option value="2">Small</option>
+              <option value="4">Medium</option>
+              <option value="8">Large</option>
+            </select>
+            <button onclick="toggleEraser()" style="font-family: DOSVGA;" id="eraser-btn">Eraser: Off</button>
+            <button onclick="clearCanvas()" style="font-family: DOSVGA;">Clear</button>
+          </div>
+          <canvas id="paint-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- DOS Window -->
+      <div class="window hidden" id="dos-window" style="width: 400px; height: 250px;" >
+        <div class="title-bar">
+          <div class="title-bar-text">MS-DOS Prompt</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('dos')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('dos')"></button>
+            <button aria-label="Close" onclick="closeWindow('dos')"></button>
+          </div>
+        </div>
+        <div class="window-body" id="dos-body">
+          <div id="dos-output"></div>
+          <div class="dos-input-line">
+            <span id="dos-prompt">C:\></span><input type="text" id="dos-input" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Window -->
+      <div class="window" id="blog-window">
+        <div class="title-bar">
+          <div class="title-bar-text">Blog</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize" onclick="minimizeWindow('blog')"></button>
+            <button aria-label="Maximize" onclick="maximizeWindow('blog')"></button>
+            <button aria-label="Close" onclick="closeWindow('blog')"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>My personal blog is coming soon. Stay tuned for articles on tech, projects, and more! 🚀</p>
+        </div>
+      </div>
+       <!-- Recycle Bin Window -->
+      <div class="window hidden" id="recycle-window" style="width: 550px; height: 300px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Recycle Bin</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('recycle')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('recycle')"></button>
+      <button aria-label="Close" onclick="closeWindow('recycle')"></button>
+    </div>
+  </div>
+  <div class="window-body" id="recycle-body">
+    <div class="menu-bar">
+      <span><u>F</u>ile</span>
+      <span><u>E</u>dit</span>
+      <span><u>V</u>iew</span>
+      <span><u>H</u>elp</span>
+    </div>
+
+    <div class="recycle-header">
+      <div class="col-name">Name</div>
+      <div class="col-location">Original Location</div>
+      <div class="col-date">Date Deleted</div>
+      <div class="col-type">Type</div>
+      <div class="col-size">Size</div>
+    </div>
+
+    <div class="recycle-content">
+<div class="recycle-item active" data-name="Pen Testing" onclick="promptRestore(this)">
+        <span class="col-name">Pen Testin...<img src="assets/images/text.ico" alt="File Icon" style="width: 10px; height: 10px;">
+        </span>
+        <span class="col-location">C:\WINDOWS\DES...</span>
+        <span class="col-date">9/14/25 10:29 AM</span>
+        <span class="col-type">PDF File</span>
+        <span class="col-size">164KB</span>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-pane">1 object(s)</div>
+      <div class="status-pane">164KB</div>
+    </div>
+  </div>
+</div>
+      <!-- The rck video overlay -->
+      <div id="rck-overlay" class="hidden" style="position: fixed; top:0; left:0; width:100%; height:100%; background:black; display:flex; justify-content:center; align-items:center; z-index:100000;">
+        <div style="position:relative;">
+          <video id="rck-video" width="640" height="360" controls>
+            <source src="assets/Vid/rck.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button onclick="closeRck()" style="position:absolute; top:10px; right:10px; padding:5px;">Close</button>
+        </div>
+      </div>
+
+
+    </div> <!-- desktop-area ends -->
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <div class="start-menu-button" onclick="toggleStartMenu(event)">
+        <img src="assets/images/Windows logo (without text).ico" id="start" />
+        <b>Start</b>
+      </div> 
+      <div class="taskbar-windows"></div>
+      <div class="taskbar-clock" id="clock">--:--</div>
+    </div>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="start-menu hidden">
+      <div class="start-left-bar">Kavyansh 95</div>
+      <div class="start-menu-main">
+        <div class="start-item has-submenu">
+          <img src="assets/images/Folder.ico" style="height: 20px;width: 20px;">
+          Portfolio
+          <div class="submenu">
+            <div class="start-item" onclick="openWindow('about')"><img src="assets/images/about_me.png"> About Me</div>
+            <div class="start-item" onclick="openWindow('projects')"><img src="assets/images/Web-documents folder 2.ico"> Projects</div>
+            <div class="start-item" onclick="openWindow('certificates')"><img src="assets/images/Certificate 2.ico"> Certificates</div>
+            <div class="start-item" onclick="openWindow('contact')"><img src="assets/images/Text in letter.ico"> Contact Me</div>
+          </div>
+        </div>
+        <div class="start-item has-submenu">
+          <img src="assets/images/Program Folder (16x16px & 32x32px).ico" style="height: 20px;width: 20px;">
+          Programs
+          <div class="submenu">
+            <div class="start-item" onclick="openWindow('paint')"><img src="assets/images/mspaint.exe_14_2.ico"> Paint</div>
+            <div class="start-item" onclick="openWindow('dos')"><img src="assets/images/Program Folder (16x16px & 32x32px).ico"> MS-DOS Prompt</div>
+            <div class="start-item" onclick="openWindow('snake')"><img src="assets/images/snake-pixel-art-removebg.png"> Snake Game</div>
+            <div class="start-item" onclick="openWindow('recycle')"><img src="assets/images/Recycle.ico"> Recycle Bin</div>
+          </div>
+        </div>
+        <div class="start-item" onclick="openWindow('wallpapers')"><img src="assets/images/Wallpaper/default_wallpaper.png" style="height: 20px;width: 20px;"> Wallpapers</div>
+        <div class="start-item" onclick="openWindow('blog')"><img src="assets/images/Book 2.ico" style="height: 20px;width: 20px;"> Blog</div>
+        <hr class="start-divider">
+        <div class="start-item" onclick="suspendSystem()"><img src="assets/images/suspend.ico" style="height: 25px;width: 25px;"> Suspend</div>
+        <div class="start-item" onclick="shutdown()"><img src="assets/images/shutdown.ico" style="height: 25px;width: 25px;"> Shut Down...</div>
+      </div>
+    </div>
+
+    <!-- Clippy Assistant -->
+    <div id="clippy-container" class="hidden">
+      <div class="speech-bubble" id="clippy-bubble">
+        <p id="clippy-text"></p>
+        <div class="clippy-buttons">
+          <button onclick="hideClippy()">Close</button>
+        </div>
+      </div>
+      <img src="assets/images/clippy.gif" alt="Clippy Assistant" id="clippy-img">
+    </div>
+
+    <!-- ✅ SUSPEND SCREEN INSIDE crt-main -->
+    <!-- <div id="suspend-screen" class="hidden">
+      <div class="suspend-message">System Suspended. Press any key or click to resume.</div>
+    </div>
+  -->
+  <!-- Shutdown Window -->
+<div class="window" id="shutdown-window">
+  <div class="title-bar">
+    <div class="title-bar-text">Shut Down</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="closeWindow('shutdown')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Are you sure you want to shut down the system?</p>
+    <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+      <button onclick="confirmShutdown()">Yes</button>
+      <button onclick="closeWindow('shutdown')">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- Suspend Window -->
+<div class="window" id="suspend-window">
+  <div class="title-bar">
+    <div class="title-bar-text">Suspend</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="closeWindow('suspend')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p>The system is going to suspend. Do you want to proceed?</p>
+    <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+      <button onclick="confirmSuspend()">Yes</button>
+      <button onclick="closeWindow('suspend')">No</button>
+    </div>
+  </div>
+</div>
+<!-- Restore Confirm Window -->
+<div class="window hidden" id="restore-window" style="width: 300px;">
+  <div class="title-bar">
+    <div class="title-bar-text">Confirm Restore</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="closeWindow('restore')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p id="restore-message">Are you sure you want to restore this file?</p>
+    <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+      <button onclick="confirmRestore()">Yes</button>
+      <button onclick="closeWindow('restore')">No</button>
+    </div>
+  </div>
+</div>
+
+  </div> <!-- crt-main ends -->
+
+  <!-- SCREENSAVER OUTSIDE CRT MAIN -->
+  <div id="screensaver" class="hidden">
+    <video id="screensaver-video" src="assets/Vid/screensaver.mp4" loop muted></video>
+  </div>
+
+<div id="suspend-screen" class="hidden">
+  <div class="suspend-message">System Suspended. Press any key or click to resume.</div>
+</div>
+</div> <div id="shutdown-screen" class="hidden">
+    <div class="shutdown-content">
+      <img src="assets/images/Windows logo (without text).ico" alt="Windows Logo">
+      <h1>Windows 95</h1>
+      <p>It's now safe to turn off your computer.</p>
+    </div>
+  </div>
+
+  <div id="suspend-screen" class="hidden">
+    </div>
+</body>
+</html>
