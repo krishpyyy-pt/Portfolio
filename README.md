@@ -6,6 +6,12 @@ Welcome to my personal portfolio, designed to look and feel like the classic Win
 
 ---
 
+## 💡 Project Goals
+
+The primary goal was to step away from traditional, templated portfolios and build something that was not only functional but also demonstrated a deep understanding of JavaScript DOM manipulation, event handling, and core CSS layout principles. It was a fun challenge to replicate the behavior of a desktop OS within the constraints of a web browser.
+
+---
+
 ## ✨ Key Features
 
 * **Retro Win95 UI**: A faithful recreation of the classic desktop, taskbar, start menu, and window elements using the [98.css](https://jdan.github.io/98.css/) library and custom styling.
@@ -48,6 +54,3 @@ To explore this project on your local machine, follow these simple steps:
 
 ---
 
-## 💡 Project Goals
-
-The primary goal was to step away from traditional, templated portfolios and build something that was not only functional but also demonstrated a deep understanding of JavaScript DOM manipulation, event handling, and core CSS layout principles. It was a fun challenge to replicate the behavior of a desktop OS within the constraints of a web browser.
