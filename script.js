@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Clippy Logic
   const clippyContainer = document.getElementById('clippy-container');
   const clippyText = document.getElementById('clippy-text');
-  const clippyWelcome = "Hello! Welcome to Krish's portfolio.";
+  const clippyWelcome = "Hello! Welcome to Kavyansh's portfolio.";
 const clippyMessages = [
   "It looks like you're exploring. You can open applications from the desktop icons or the Start Menu.",
   "Why not check out the Snake game? It's a classic!",

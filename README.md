@@ -1,6 +1,6 @@
 # Windows 95 Style Interactive Portfolio
 
-![Portfolio Screenshot](https://i.imgur.com/rS2t9a3.png) 
+![Portfolio Screenshot](assets/image/screenshot/Schreenshot.png) 
 
 Welcome to my personal portfolio, designed to look and feel like the classic Windows 95 operating system. This project was built from scratch to create a unique and memorable user experience that showcases my projects, certifications, and skills in an interactive desktop environment.
 
