@@ -28,19 +28,19 @@
       "title": "Google cybersecurity Certificate",
       "organisation": "Google and Coursera",
       "date": "August 2025",
-      "image": "assets/images/Cert/Google.jpeg" 
+      "image": "assets/images/certs/Google(port_ver).png" 
     },
     {
       "title": "Ethical Hacking with AI",
       "organisation": "IIT madras and Internshala",
       "date": "July 2025",
-      "image": "assets/images/Cert/internshala_cert.jpeg"
+      "image": "assets/images/certs/internshala(port_ver.).png"
     },
     {
       "title": "Career Advancment Bootcamp",
       "organisation": "Medha",
       "date": "August 2025",
-      "image": "assets/images/Cert/Medha_cert.jpeg"
+      "image": "assets/images/certs/medha(port_ver.).png"
     }
   ],
 
